@@ -16,7 +16,7 @@ namespace Almanac.Functions
             ApplicationHelper.Startup();
         }
         [FunctionName("NotificationFunction")]
-        public static void Run([TimerTrigger("0 0 6 1/1 * * ",RunOnStartup = true)]TimerInfo myTimer, TraceWriter log,ExecutionContext context)
+        public static void Run([TimerTrigger("0 0 1 1/1 * * ",RunOnStartup = true)]TimerInfo myTimer, TraceWriter log,ExecutionContext context)
         {
             var logger = new AppInsightLogger();
             try

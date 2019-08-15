@@ -28,12 +28,17 @@ namespace Almanac.Service.Channels
             const string authToken = "6389a0e7c883ab9fdddebe64f9c19fa2";
 
             TwilioClient.Init(accountSid, authToken);
+            var whatsAppNumbers = new List<string>() {"whatsapp:+919980825120", "whatsapp:+919538705175"};
 
-            var message = MessageResource.Create(
-                body: messageToSend,
-                from: new Twilio.Types.PhoneNumber("whatsapp:+14155238886"),
-                to: new Twilio.Types.PhoneNumber("whatsapp:+919980825120")
-            );
+            whatsAppNumbers.ForEach(x =>
+            {
+                MessageResource.Create(
+                    body: messageToSend,
+                    from: new Twilio.Types.PhoneNumber("whatsapp:+14155238886"),
+                    to: new Twilio.Types.PhoneNumber(x)
+                );
+            });
+           
 
         }
     }
