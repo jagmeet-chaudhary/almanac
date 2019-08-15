@@ -14,13 +14,14 @@ namespace Almanac.Service.Channels
 {
     public class WhatsAppChannel : BaseChannel
     {
-        private const string template = "Your appointment is coming up on / in {0} day(s) for Vikrant at DPS E-City EventDate : {1},Event : {2},DressCode : {3}, Material : {4}, Activity : {5} ";
+       
         public WhatsAppChannel(ITemplateProvider templateProvider, ILog logger, ISettingsProvider settingsProvider) : base(templateProvider, logger, settingsProvider)
         {
         }
 
         protected override void Send(Event e)
         {
+            var template = GetTemplate(ChannelType.WhatsApp);
             var messageToSend = string.Format(template, e.DaysRemaining, e.EventDate, e.Celebration, e.DressCode.IfEmptyThen("NONE"), e.Material.IfEmptyThen("NONE"),
                 e.TypeOfActivity.IfEmptyThen("NONE"));
             const string accountSid = "ACc1c7c4e33ef23acce9453ef39923b192";

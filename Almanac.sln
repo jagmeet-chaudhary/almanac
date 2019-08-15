@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Almanac.Service", "Almanac.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Almanac.Service.Tests", "Almanac.Service.Tests\Almanac.Service.Tests.csproj", "{C60F3DE0-A3D2-42CD-A80C-FB9335821306}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Almanac.Functions", "Almanac.Functions\Almanac.Functions.csproj", "{A28AA46B-6456-417A-BA03-F6275210065D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Almanac.Functions", "Almanac.Functions\Almanac.Functions.csproj", "{A28AA46B-6456-417A-BA03-F6275210065D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

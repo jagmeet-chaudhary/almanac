@@ -11,6 +11,10 @@ namespace Almanac.Functions
 {
     public static class NotificationFunction
     {
+        static NotificationFunction()
+        {
+            ApplicationHelper.Startup();
+        }
         [FunctionName("NotificationFunction")]
         public static void Run([TimerTrigger("0 0 6 1/1 * * ",RunOnStartup = true)]TimerInfo myTimer, TraceWriter log,ExecutionContext context)
         {

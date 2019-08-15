@@ -25,8 +25,8 @@ namespace Almanac.Service.Channels
             return new List<INotificationChannel>()
             {
                 new WhatsAppChannel(new DefaultTemplateProvider(),new AppInsightLogger(), settingsProvider),
-                new ConsoleChannel(new DefaultTemplateProvider(),new AppInsightLogger(), settingsProvider)//,
-                //new EmailChannel(new DefaultTemplateProvider(), new AppInsightLogger(),settingsProvider)
+                new ConsoleChannel(new DefaultTemplateProvider(),new AppInsightLogger(), settingsProvider),
+                new EmailChannel(new DefaultTemplateProvider(), new AppInsightLogger(),settingsProvider)
             };
         }
     }
